@@ -2,14 +2,14 @@ pipeline {
     agent any  // Runs on any available agent
 
     environment {
-        DOCKER_IMAGE = "your-dockerhub-username/simple-webpage"
+        DOCKER_IMAGE = "kbhola001/simple-webpage"
         DOCKER_CREDENTIALS = "docker-hub-credentials"  // Stored in Jenkins credentials
     }
 
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/your-username/webpage-project.git'
+                git branch: 'main', url: 'https://github.com/kestonbhola/moregithublessons.git'
             }
         }
 
