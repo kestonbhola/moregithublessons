@@ -5,3 +5,5 @@ Just an initial file
 Initiate docker procude test.
 
 Attempting another build after permissions issue with docker daemon.
+
+Attempting fix of Docker Hub login issues
