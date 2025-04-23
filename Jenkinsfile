@@ -44,6 +44,9 @@ pipeline {
         stage('Deploy Container') {
             steps {
                 script {
+                    // Cleanup unused Docker images to free space
+                    sh "docker image prune -f"
+                    
                     // Stop running container (if exists)
                     sh "docker stop my-webpage-container || true"
                     sh "docker rm my-webpage-container || true"
